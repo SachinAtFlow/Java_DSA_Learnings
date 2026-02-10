@@ -1,6 +1,6 @@
-import java.util.*;
+// import java.util.*;
 
-public class LinearSearch {
+public class ArrayOperation {
     public static void LinearSearchNum(int arr[], int key) { // Time Complexity=O(n)
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == key) {
@@ -79,18 +79,32 @@ public class LinearSearch {
         }
     }
 
+    // printing subarrays
+    public static void subarray(int arr[]) {
+        for (int i = 0; i <arr.length; i++) {
+            for (int j = i ; j < arr.length; j++) {
+                for(int k=i;k<=j;k++){
+                    System.out.print(arr[k]+" ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String arg[]) {
-        int num[] = { 2, 4, 6, 8, 10 };
+        int num[] = { 2, 4, 6, 8, 10};
         int numbers[] = { 2, 4, 6, 8, 10, 12, 14, 16, 86 };
-        // int Numkey=86;
-        // LinearSearchNum(numbers, Numkey);
-        // String food[]={"samosa","kachori","chai","halwa"};
-        // String foodKey="coffee";
-        // LinearSearchFood(food, foodKey);
-        // System.out.println(largestInt(numbers));
-        // int found=binarySearch(numbers, Numkey);
-        // System.out.println(found);
-        // reverseArray(numbers);
-        // pairing(num);
+        int Numkey=86;
+        LinearSearchNum(numbers, Numkey);
+        String food[]={"samosa","kachori","chai","halwa"};
+        String foodKey="coffee";
+        LinearSearchFood(food, foodKey);
+        System.out.println(largestInt(numbers));
+        int found=binarySearch(numbers, Numkey);
+        System.out.println(found);
+        reverseArray(numbers);
+        pairing(num);
+        subarray(num);
     }
 }
